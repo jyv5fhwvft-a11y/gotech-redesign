@@ -265,3 +265,188 @@ body {
     .hero-actions { display: flex; justify-content: center; align-items: center; }
 }
 
+/* Services Section Configuration */
+.services-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-tag {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary-glow);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Bento Grid System Core */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 240px;
+    gap: 1.5rem;
+}
+
+/* Base Bento Card & Glassmorphic Layering */
+.bento-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Sizing Modifiers for Grid Blueprint Layout */
+.card-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.card-wide {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.card-tall {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.card-medium {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Typography & Layout Elements Inside Bento Boxes */
+.card-icon {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.bento-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.bento-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Dynamic Glowing Tag Modules */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tags span {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--text-main);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Sub-service Monospace Listings */
+.sub-service-list {
+    list-style: none;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.25rem;
+}
+
+.sub-service-list li {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-main);
+}
+
+.sub-service-list .index {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--secondary-glow);
+    margin-right: 0.5rem;
+}
+
+.horizontal-list {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.25rem;
+}
+
+.dense-list li {
+    margin-bottom: 0.9rem;
+}
+
+/* Active Mouse Border Radial Glow System */
+.bento-card .card-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(0,0,0,0) 70%);
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.bento-card:hover .card-glow {
+    opacity: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Adaptive Breakdown for Mobile & iPad Screens */
+@media (max-width: 968px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    .card-large, .card-wide, .card-tall, .card-medium {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .horizontal-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+
