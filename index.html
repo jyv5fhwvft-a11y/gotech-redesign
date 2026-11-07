@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Tech Solutions - Next Gen AI Prototype</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for sharp tech typography -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Ambient Glowing Background Canvas -->
+    <div class="glow-container">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Go Tech<span>.ai</span></div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Portfolio</a>
+                <a href="#">About</a>
+            </div>
+            <button class="btn-secondary">Strategy Call</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <!-- Left Info Panel -->
+            <div class="hero-content">
+                <div class="badge"><span class="badge-dot"></span> Built Around Your Business</div>
+                <h1>Intelligent Solutions <br><span class="text-gradient">Engineered for Action</span></h1>
+                <p>Turn operational challenges into autonomous workflows. We bring custom software architecture, RAG deployment, and agentic AI together under one premium ecosystem.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary magnetic-btn">Discuss Your Project</button>
+                    <button class="btn-text">Explore Our Work &rarr;</button>
+                </div>
+            </div>
+
+            <!-- Right Interactive Console Panel -->
+            <div class="hero-visual">
+                <div class="console-box">
+                    <div class="console-header">
+                        <div class="console-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="console-title">agent_workflow.json</div>
+                    </div>
+                    <div class="console-body">
+                        <pre><code id="typewriter-code"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
