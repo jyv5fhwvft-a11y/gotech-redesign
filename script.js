@@ -51,4 +51,22 @@ if(window.innerWidth > 768) { // Only run tracking for desktop/mouse cursors
     });
 }
 
+// Interactive Dynamic Background Border Spotlight Tracking for Bento Grid Cards
+const bentoCards = document.querySelectorAll('.bento-card');
+
+bentoCards.forEach(card => {
+    const glow = card.querySelector('.card-glow');
+    
+    card.addEventListener('mousemove', (e) => {
+        // Find local container dimensions relative to the scrolling viewport viewport boundaries
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Dynamically translate the radial glow mask background positioning context matching cursor
+        glow.style.left = `${x}px`;
+        glow.style.top = `${y}px`;
+    });
+});
+
 
